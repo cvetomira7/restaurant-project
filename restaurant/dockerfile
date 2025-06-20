@@ -1,0 +1,10 @@
+# Dockerfile
+FROM php:8.2-apache
+
+# Копиране на файловете
+COPY ./app /var/www/html/
+
+# Инсталиране на MySQL модул
+RUN docker-php-ext-install mysqli
+
+EXPOSE 80
